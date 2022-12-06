@@ -28,13 +28,14 @@ const tokenPrice = () => {
     // In this case, we will find the USD price for DVX-BNB
     const wbnbAddress = "0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c";
 
-    // Main token address (DVX)
+    // Main token address (DVX, in our case)
+    // https://coinmarketcap.com/currencies/drivenx/
     const dvxAddress = "0x6db3972c6a5535708e7A4F7Ad52F24d178D9A93e";
 
     // Pancakeswap Factory address
     const pancakeFactory = "0xcA143Ce32Fe78f1f7019d7d551a6402fC5350c73";
 
-    // Get the details of token 1 - optional
+    // Get the details of token 1 - [OPTIONAL]
     const getTokenDetails1 = async (address) => {
         const iProvider = new ethers.providers.JsonRpcProvider("https://bsc-dataseed.binance.org");
 
@@ -56,7 +57,7 @@ const tokenPrice = () => {
         setName0(name);
     }
 
-    // Get the details of token 2 - optional
+    // Get the details of token 2 - [OPTIONAL]
     const getTokenDetails2 = async (address) => {
         const iProvider = new ethers.providers.JsonRpcProvider("https://bsc-dataseed.binance.org");
 
