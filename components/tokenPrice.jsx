@@ -3,7 +3,7 @@
 // Imports
 import { React, useState, useEffect } from "react"
 
-import { ethers } from "ethers";
+import { BigNumber, ethers } from "ethers";
 
 const TokenPrice = () => {
 
@@ -126,9 +126,9 @@ const TokenPrice = () => {
         // Sometimes you will have token0 = token and token1 = wBNB and sometimes you will have token0 = wBNB and token1 = token
         // In order to get the proper price, we will use the following if statement
         if(token0 == wbnbAddress) {
-          tokenPriceInBnb = reserves0 / reserves1;
+          tokenPriceInBnb = BigNumber.from(reserves0) / BigNumber.from(reserves1);
         } else {
-            tokenPriceInBnb = reserves1 / reserves0;
+            tokenPriceInBnb = BigNumber.from(reserves1) / BigNumber.from(reserves0);
         }
 
         setBnbTokenPrice(tokenPriceInBnb);
