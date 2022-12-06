@@ -3,7 +3,7 @@ import { React, useState, useEffect } from "react"
 
 import { ethers } from "ethers";
 
-const tokenPrice = () => {
+const TokenPrice = () => {
 
     // Token1 details
     const [totalSupply0, setTotalSupply0] = useState("");
@@ -173,4 +173,4 @@ const tokenPrice = () => {
   )
 }
 
-export default tokenPrice
+export default TokenPrice
